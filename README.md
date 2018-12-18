@@ -17,7 +17,6 @@
   |column|Type|Options|
   |------|----|-------|
   |name|string|null: false|
-  |user_id|integer|null: false, foreign_key: true|
 
   ### Association
   * has_many :users, through: :members
