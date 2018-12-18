@@ -35,7 +35,7 @@
   ## messages table
   |Column|Type|Options|
   |------|----|-------|
-  |body|text|null: false|
+  |body|text||
   |image|string||
   |user_id|integer|foreign_key: true|
   |group_id|integer|foreign_key: true|
