@@ -8,7 +8,6 @@
   |name|string|index: true, null: false, unique: true|
   |email|string|null: false, unique: true|
   |password|string|null: false|
-  |group_id|integer|foreign_key: true|
 
   ### Association
   * has_many :groups, through: :members
