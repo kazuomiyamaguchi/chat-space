@@ -4,7 +4,6 @@
   height: 100vh;
 
     &__user {
-      //@include clearfix();
       display: flex;
       background-color: $dark-blue;
       width: 100%;
@@ -44,14 +43,14 @@
       color: $white;
       padding: 20px;
       display: inline-block;
-    }
 
-    &-content a {
-      text-decoration: none;
-    }
+      & a {
+        text-decoration: none;
+      }
 
-    &-content:hover {
-      background-color: #425771;
+      &:hover {
+        background-color: #425771;
+      }
     }
 
     &-name {
