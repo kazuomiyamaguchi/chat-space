@@ -38,3 +38,48 @@
             test01グループ
           %p.side__group-message
             まだメッセージはありません。
+
+  //右側
+  .chat-main
+    .chat-main__header
+      .chat-main__header--group
+        %h2.chat-main__header--group-name
+          testグループ
+        %p.chat-main__header--group-members
+          Members: kazuomi
+      %a.btn{href: '/'}
+        .btn-edit
+          Edit
+
+    .chat-main__content
+      .chat-main__list
+        .chat-main__message
+          .chat-main__message-name
+            Members: kazuomi
+          .chat-main__message-time
+            テス
+          .chat-main__message-text
+            なるほど
+        .chat-main__message
+          .chat-main__message-name
+            Members: kazuomi
+          .chat-main__message-time
+            Members: kazuomi
+          .chat-main__message-text
+            Members: kazuomi
+        .chat-main__message
+          .chat-main__message-name
+            Members: kazuomi
+          .chat-main__message-time
+            テス
+          .chat-main__message-text
+            テス
+
+    .chat-main__footer
+      %form.footer__form
+        %input.message{type: "text", placeholder: "type a message"}
+        %label{for: "message-image"}
+          %input.image{type: "file", accept: "image/*", id: "message-image"}
+          %i.fa.fa-picture-o
+        %input.submit{type: "submit", value: "Send"}
+
