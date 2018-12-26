@@ -1,1 +1,40 @@
 = render partial: "notification"
+
+.wrapper
+  //左側
+  .side
+    .side__user
+      .side__user-content
+        .side__user-name
+          Kazuomi yamaguchi
+        .side__user-actions
+          = link_to root_path do
+            %i.fa.fa-pencil-square-o
+          = link_to root_path do
+            %i.fa.fa-cog
+
+    .side__group
+      = link_to root_path do
+        .side__group-content
+          %p.side__group-name
+            test01グループ
+          %p.side__group-message
+            まだメッセージはありません。
+      = link_to root_path do
+        .side__group-content
+          %p.side__group-name
+            test02グループ
+          %p.side__group-message
+            まだメッセージはありません。
+      = link_to root_path do
+        .side__group-content
+          %p.side__group-name
+            test03グループ
+          %p.side__group-message
+            まだメッセージはありません。
+      = link_to root_path do
+        .side__group-content
+          %p.side__group-name
+            test01グループ
+          %p.side__group-message
+            まだメッセージはありません。
