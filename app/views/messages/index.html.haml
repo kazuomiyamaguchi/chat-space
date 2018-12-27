@@ -1,0 +1,41 @@
+= render partial: "notification"
+
+//左側
+.side
+  .side__user
+    .side__user-content
+      .side__user-name
+        Kazuomi yamaguchi
+      .side__user-actions
+        = link_to root_path do
+          %i.fa.fa-pencil-square-o
+        = link_to root_path do
+          %i.fa.fa-cog
+
+  .side__group
+    = render partial: "chatside"
+
+//右側
+.chat-main
+  .chat-main__header
+    .chat-main__header--group
+      %h2.chat-main__header--group-name
+        testグループ
+      %p.chat-main__header--group-members
+        Members: kazuomi
+    = link_to root_path do
+      .btn-edit
+        Edit
+
+  .chat-main__content
+    .chat-main__list
+      = render partial: "chatmain"
+
+  .chat-main__footer
+    %form.footer__form
+      %input.message{type: "text", placeholder: "type a message"}
+      %label{for: "message-image"}
+        %input.image{type: "file", accept: "image/*", id: "message-image"}
+        %i.fa.fa-picture-o
+      %input.submit{type: "submit", value: "Send"}
+
