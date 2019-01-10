@@ -5,8 +5,8 @@
       .side__user-name
         = current_user.name
       .side__user-actions
-        = link_to root_path do
-          %i.fa.fa-pencil-square-o
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: 'icon'
 
