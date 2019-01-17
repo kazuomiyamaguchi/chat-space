@@ -1,10 +1,23 @@
 $(function(){
   function buildHTML(data){
-    var html = `
-               `
+    var image = message.image ? `<img src="${message.image}"> ` : ""
+    var html = `<div class="chat-main__message">
+                  <div class="chat-main__message-name">
+                    ${message.name}
+                  </div>
+                  <div class="chat-main__message-time">
+                    ${message.time}
+                  </div>
+                  <p class="chat-main__message-text">
+                    ${message.body}
+                  </p>
+                  <p class="chat-main__message-body">
+                    ${image}
+                  </p>
+                  </div>`
     return html;
   }
-  $('#new_message').on('submit', function(e){
+  $('#send_message').on('submit', function(e){
     e.preventDefault();
     console.log(this);
     var formData = new FormData(this);
@@ -21,6 +34,10 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__list').append(html)
       $('.message').val('')
+      $('.chat-main__list').animate({scrollTop: $('.chat-main__list')[0].scrollHeight}, 'fast')
+    })
+    .fail(function(){
+      alert('error');
     })
   })
 });
