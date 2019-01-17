@@ -49,6 +49,7 @@
     box-sizing: border-box;
     padding: 0 40px;
     background-color: $pearl-white;
+    overflow-y: scroll;
   }
 
   &__list {
@@ -78,6 +79,10 @@
       &-text {
         font-size: 14px;
         color: $thin-black;
+      }
+      &-body {
+          color: $dark-blue;
+          font-size: 14px;
       }
   }
 

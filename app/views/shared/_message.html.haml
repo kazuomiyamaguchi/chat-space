@@ -6,4 +6,5 @@
   - if message.content.present?
     %p.chat-main__message-text
       = message.content
-  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    %p.chat-main__message-body
+      = image_tag message.image.url if message.image.present?

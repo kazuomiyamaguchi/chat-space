@@ -58,3 +58,5 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

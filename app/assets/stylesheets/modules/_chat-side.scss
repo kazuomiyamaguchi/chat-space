@@ -36,6 +36,7 @@
     background-color: $indigo-blue;
     width: 100%;
     height: calc(100vh - 15%);
+    overflow-y: scroll;
 
     &-content {
       box-sizing: border-box;
