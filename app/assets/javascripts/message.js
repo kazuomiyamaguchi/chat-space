@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(data){
+  function buildHTML(message){
     var image = message.image ? `<img src="${message.image}"> ` : ""
     var html = `<div class="chat-main__message">
                   <div class="chat-main__message-name">
@@ -11,9 +11,7 @@ $(function(){
                   <p class="chat-main__message-text">
                     ${message.body}
                   </p>
-                  <p class="chat-main__message-body">
-                    ${image}
-                  </p>
+                  ${image}
                   </div>`
     return html;
   }
@@ -23,13 +21,14 @@ $(function(){
     var url = $(this).attr('action')
     $.ajax({
       url: url,
-      type: "POST",
+      type: 'POST',
       data: formData,
-      datatype: 'json',
+      dataType: 'json',
       processData: false,
       contentType: false
     })
     .done(function(data){
+      console.log(data);
       var html = buildHTML(data);
       $('.chat-main__list').append(html)
       $('.message').val('')
