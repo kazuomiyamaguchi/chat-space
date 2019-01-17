@@ -49,6 +49,7 @@
     box-sizing: border-box;
     padding: 0 40px;
     background-color: $pearl-white;
+    overflow-y: scroll;
   }
 
   &__list {

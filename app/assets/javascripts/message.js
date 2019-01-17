@@ -9,7 +9,7 @@ $(function(){
                     ${message.time}
                   </div>
                   <p class="chat-main__message-text">
-                    ${message.body}
+                    ${message.content}
                   </p>
                   ${image}
                   </div>`
@@ -17,9 +17,9 @@ $(function(){
   }
 
   function clearBox(html){
-    $('.chat-main__body--messages-list').append(html)
+    $('.chat-main__list').append(html)
     $('.message').val('')
-    $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast')
+    $('.chat-main__content').animate({scrollTop: $('.chat-main__content')[0].scrollHeight}, 'fast')
   }
 
   $('#send_message').on('submit', function(e){
