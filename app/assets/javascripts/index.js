@@ -1,6 +1,6 @@
 $(function() {
   var searchList = $('#user-search-result');
-  function searchUser(user) {
+  function appendUserToSearchResult(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.name}</p>
                   <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</a>
@@ -9,7 +9,7 @@ $(function() {
   };
 
   var memberList = $('#chat-group-users');
-  function addUser(id, name) {
+  function addUserToGroupUser(id, name) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${id}'>
                   <input name='group[user_ids][]' type='hidden' value='${id}'>
                   <p class='chat-group-user__name'>${name}</p>
@@ -20,7 +20,6 @@ $(function() {
 
   $('#user-search-field').on('keyup', function() {
     var input = $(this).val();
-    console.log(input);
 
     $.ajax({
       type: 'GET',
@@ -33,7 +32,7 @@ $(function() {
       searchList.empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
-          searchUser(user);
+          appendUserToSearchResult(user);
         });
       }
     })
@@ -45,7 +44,7 @@ $(function() {
   $(document).on('click', '.user-search-add', function() {
     var userId = $(this).data('user-id');
     var userName = $(this).data('user-name');
-    addUser(userId, userName);
+    addUserToGroupUser(userId, userName);
     $(this).parent().remove();
   });
 
