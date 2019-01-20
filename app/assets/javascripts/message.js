@@ -51,7 +51,7 @@ $(function(){
         var messageId = 0;
       }
       $.ajax({
-        url: location.href.json,
+        url: location.href,
         type: 'GET',
         data: {id: messageId},
         dataType: 'json'
@@ -61,8 +61,7 @@ $(function(){
         messages.forEach(function(message) {
           insertHTML += buildHTML(message);
         });
-        $('.chat-main__list').append(insertHTML);
-        $('.chat-main__content').animate({scrollTop: $('.chat-main__content')[0].scrollHeight}, 'fast');
+        clearBox(html);
       })
       .fail(function() {
         alert("自動更新に失敗しました");
