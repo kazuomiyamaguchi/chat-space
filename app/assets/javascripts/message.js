@@ -3,7 +3,7 @@ $(function(){
     var image = message.image ? `<img src="${message.image}"> ` : ""
     var html = `<div class="chat-main__message clearfix" deta-message-id="${message.id}">
                   <div class="chat-main__message-name">
-                    ${message.name}
+                    ${message.user_name}
                   </div>
                   <div class="chat-main__message-time">
                     ${message.time}
