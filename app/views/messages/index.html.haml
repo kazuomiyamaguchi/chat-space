@@ -7,7 +7,7 @@
   .chat-main__header
     .chat-main__header--group
       %h2.chat-main__header--group-name
-        テスト
+        = @group.name
       %p.chat-main__header--group-members
         Members:
         - @group.users.each do |user|
