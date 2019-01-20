@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message) {
     var image = message.image ? `<img src="${message.image}"> ` : ""
-    var html = `<div class="chat-main__message clearfix" deta-message-id="${message.id}">
+    var html = `<div class="chat-main__message" deta-message-id="${message.id}">
                   <div class="chat-main__message-name">
                     ${message.user_name}
                   </div>
@@ -61,8 +61,8 @@ $(function(){
         messages.forEach(function(message) {
           insertHTML += buildHTML(message);
         });
-        $('.chat-main__body--messages-list').append(insertHTML);
-        $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
+        $('.chat-main__list').append(insertHTML);
+        $('.chat-main__content').animate({scrollTop: $('.chat-main__content')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
         alert("自動更新に失敗しました");
