@@ -15,5 +15,4 @@
 
 # Ignore Byebug command history file.
 .byebug_history
-#アップロードされた画像ファイル
-public/uploads/*
+
