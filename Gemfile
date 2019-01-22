@@ -60,3 +60,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+#アプリケーションサーバーの一種
+gem 'unicorn'
