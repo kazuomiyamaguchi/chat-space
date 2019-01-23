@@ -69,3 +69,6 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 #アプリケーションサーバーの一種
 gem 'unicorn'
+
+#外部のストレージを選択しアップロードするのを補助してくれるGem
+gem 'fog-aws'
