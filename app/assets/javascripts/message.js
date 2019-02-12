@@ -41,6 +41,9 @@ $(function(){
     .fail(function() {
       alert('error');
     })
+    .always(function(){
+      $('.form__submit').prop('disabled', false);
+    });
   })
 
   var interval = setInterval(function() {
@@ -61,7 +64,6 @@ $(function(){
         messages.forEach(function(message) {
           insertHTML += buildHTML(message);
         });
-        clearBox(html);
       })
       .fail(function() {
         alert("自動更新に失敗しました");
