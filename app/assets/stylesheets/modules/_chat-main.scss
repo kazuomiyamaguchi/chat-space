@@ -44,7 +44,7 @@
 
   //main chat部分
   &__content {
-    width: 100%;
+    width: calc(100vw - 300px);
     height: calc(100vh - 15% - 90px);
     box-sizing: border-box;
     padding: 0 40px;
