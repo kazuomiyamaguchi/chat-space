@@ -1,6 +1,6 @@
 .chat-main {
   float: right;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 310px);
   height: 100vh;
 
   //header部分
@@ -44,7 +44,7 @@
 
   //main chat部分
   &__content {
-    width: calc(100vw - 300px);
+    width: 100%;
     height: calc(100vh - 15% - 90px);
     box-sizing: border-box;
     padding: 0 40px;
